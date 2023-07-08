@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="cheering">
+        <div class="trophy">
+          <img src="trophy.jpg" alt="" />
+        </div>
+        <div id="congrats">
+          <h1>HURRAY!!</h1>
+          <h2>YOU WON THE GAME</h2>
+          <a href="index.html">
+            <button id="pa">PLAY AGAIN</button>
+          </a>
+        </div>
+      </div>
+      <div id="win-rules-container">
+        <div id="win-rules">
+          <h1>Game Rules</h1>
+          <ul>
+            <li>
+              <span
+                >Rock beats scissors, scissors beat paper, and paper beats
+                rock.</span
+              >
+            </li>
+            <li>
+              <span>
+                ahead of time whether you’ll count off “rock, paper, scissors,
+                shoot” or just “rock, paper, scissors.”</span
+              >
+            </li>
+            <li>
+              <span>
+                Use rock, paper, scissors to settle minor decisions or simply
+                play to pass the time</span
+              >
+            </li>
+            <li>
+              <span>
+                If both players lay down the same hand, each player lays down
+                another hand
+              </span>
+            </li>
+          </ul>
+        </div>
+        <div id="win-close">
+          <h2>X</h2>
+        </div>
+      </div>
+    </div>
+    <div id="rule-button">
+      <h2>RULES</h2>
+    </div>
+  </body>
+  <script>
+    document.getElementById("win-close").addEventListener("click", close_rules);
+
+    function close_rules() {
+      document.getElementById("win-close").style.visibility = "hidden";
+      document.getElementById("win-rules").style.visibility = "hidden";
+    }
+
+    document
+      .getElementById("rule-button")
+      .addEventListener("click", open_rules);
+
+    function open_rules() {
+      document.getElementById("win-close").style.visibility = "visible";
+      document.getElementById("win-rules").style.visibility = "visible";
+    }
+  </script>
+</html>
